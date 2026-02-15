@@ -1,240 +1,347 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONIK</title>
-  <link rel="stylesheet" href="style.css" />
-  
-  <!-- Google Fonts -->  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"rel="stylesheet"/>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONIK</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Boxicons -->  
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
-<!-- Particle Background -->
-<div id="particles-js"></div>
-<header class="header">
-  <div class="logo">ONIK</div>
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    <header class="header">
+      <div class="logo">ONIK</div>
 
-  <!-- Mobile Menu Button -->
-  <div class="menu-btn" id="menuBtn">☰</div>
+      <!-- Mobile Menu Button -->
+      <div class="menu-btn" id="menuBtn">☰</div>
 
-  <!-- Navigation -->
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <!-- Navigation -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+    </header>
 
-</header>
+    <!-- ===== Hero Section ===== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Onik Das</span></h1>
+        <p>I'm a <span class="typed-text"></span></p>
 
-<!-- ===== Hero Section ===== -->  
-<section id="home" class="hero">  
-  <div class="hero-text">  
-    <h1>Hello, I'm <span>Onik Das</span></h1>  
-    <p>I'm a <span class="typed-text"></span></p>  
+        <div class="socials">
+          <a href="https://github.com/OnikTechHub" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
 
-  <div class="socials">  
+          <a href="https://www.facebook.com/share/1FpPzRq3Fd/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/8801828347761" target="_blank">
+            <i class="fab fa-whatsapp"></i
+          ></a>
 
-<a href="https://github.com/OnikTechHub" target="_blank">  
-  <i class="fab fa-github"></i>  
-</a>  
+          <a href="https://linkedin.com/in/YourLinkedInID" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <br />
+        <a href="#projects" class="btn">See My Work</a>
+      </div>
+      <div class="hero-img">
+        <img src="img/home-org.png" alt="My Photo" />
+      </div>
+    </section>
 
-<a href="https://www.facebook.com/share/1FpPzRq3Fd/" target="_blank">  
-  <i class="fab fa-facebook"></i>  
-</a>  
-<a href="https://wa.me/8801828347761" target="_blank">  
-  <i class="fab fa-whatsapp"></i></a>  
+    <br />
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm <b>Onik Das</b>. I love building modern, responsive, and
+        user-friendly websites.
+      </p>
 
-<a href="https://linkedin.com/in/YourLinkedInID" target="_blank">  
-  <i class="fab fa-linkedin"></i>  
-</a>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>4+</h3>
+          <p>Completed Projects</p>
+        </div>
+        <div class="stat-box">
+          <h3>1+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+          <h3>2+</h3>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+    </section>
 
-  </div>  
-      <br> <a href="#projects" class="btn">See My Work</a>  
-      </div>  <div class="hero-img">   
-    <img src="img/home-org.png" alt="My Photo" />  
-  </div>  
-    
-</section>  
+    <section id="skills">
+      <h2>My Skills</h2>
 
-<br>
-<section id="about" class="about">  
-  <h2>About Me</h2>  
-  <p>  
-    Hi! I'm <b>Onik Das</b>. I love building modern, responsive, and  
-    user-friendly websites.  
-  </p>  
+      <h3 class="category-title">Frontend</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          />
+          <div class="skill-label">HTML5</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          />
+          <div class="skill-label">CSS3</div>
+        </div>
+        <div class="skill-card">
+          <img src="img/download.png" />
+          <div class="skill-label">Tailwind CSS</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          />
+          <div class="skill-label">JavaScript</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          />
+          <div class="skill-label">React</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+          />
+          <div class="skill-label">Next.js</div>
+        </div>
+      </div>
 
-  <div class="stats">  
-    <div class="stat-box">  
-      <h3>4+</h3>  
-      <p>Completed Projects</p>  
-    </div>  
-    <div class="stat-box">  
-      <h3>1+</h3>  
-      <p>Years Experience</p>  
-    </div>  
-    <div class="stat-box">  
-      <h3>2+</h3>  
-      <p>Happy Clients</p>  
-    </div>  
-  </div>  
-</section>  
+      <h3 class="category-title">Backend</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          />
+          <div class="skill-label">Node.js</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+          />
+          <div class="skill-label">Express.js</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+          />
+          <div class="skill-label">MongoDB</div>
+        </div>
+      </div>
 
+      <h3 class="category-title">Tools</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+          />
+          <div class="skill-label">Figma</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+          />
+          <div class="skill-label">Git / GitHub</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+          />
+          <div class="skill-label">Firebase</div>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+          />
+          <div class="skill-label">VS Code</div>
+        </div>
+      </div>
+    </section>
 
-<section id="skills">  
-  <h2>My Skills</h2>  
+    <section id="education" class="education">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="edu-card">
+          <h3>Diploma in Computer Science & Engineering (CSE)</h3>
+          <p class="edu-place">Chittagong Polytechnic Institute</p>
+          <p class="edu-year">2023 – Current</p>
+          <p class="edu-desc">
+            Studying core subjects including Data Structures, Web Development,
+            and Software Engineering. Passionate about building real-world
+            projects and solving problems through technology.
+          </p>
+        </div>
 
-  <h3 class="category-title">Frontend</h3>  
-  <div class="skills-grid">
-      
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><div class="skill-label">HTML5</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /><div class="skill-label">CSS3</div></div>  
-    <div class="skill-card" ><img src="img/download.png" ><div class="skill-label">Tailwind CSS</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /><div class="skill-label">JavaScript</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /><div class="skill-label">React</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" /><div class="skill-label">Next.js</div></div>  
-  </div>  
+        <div class="edu-card">
+          <h3>Secondary School Certificate (SSC)</h3>
+          <p class="edu-place">Khaiyachara High School</p>
+          <p class="edu-year">2020 – 2022</p>
+          <p class="edu-desc">
+            Spent the most memorable years here — full of friends, fun, and the
+            first lessons of life that shaped my future.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="img/project1.jpg" alt="Project 1" />
+          <h3>QR Code Generate</h3>
 
-  <h3 class="category-title">Backend</h3>  
-  <div class="skills-grid">  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /><div class="skill-label">Node.js</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" /><div class="skill-label">Express.js</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" /><div class="skill-label">MongoDB</div></div>  
-  </div>  
+          <div class="project-buttons">
+            <button onclick="openImageModal('img/project1.jpg')">
+              View Image
+            </button>
+            <a
+              href="https://oniktechhub.github.io/Generator-OR-Code/"
+              target="_blank"
+              >Live Demo</a
+            >
+          </div>
+        </div>
 
-  <h3 class="category-title">Tools</h3>  
-  <div class="skills-grid">  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" /><div class="skill-label">Figma</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /><div class="skill-label">Git / GitHub</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" /><div class="skill-label">Firebase</div></div>  
-    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" /><div class="skill-label">VS Code</div></div>  
-  </div>  
-</section>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="img/TeaHouse.png" alt="Project 2" />
+          <h3></h3>
 
-<section id="education" class="education">  
-  <h2>Education</h2>    <div class="education-container">  <div class="edu-card">  
-  <h3>Diploma in Computer Science & Engineering (CSE)</h3>  
-  <p class="edu-place">Chittagong Polytechnic Institute</p>  
-  <p class="edu-year">2023 – Current</p>  
-  <p class="edu-desc">  
-    Studying core subjects including Data Structures, Web Development,  
-    and Software Engineering. Passionate about building real-world projects  
-    and solving problems through technology.  
-  </p>  
-</div>  
+          <div class="project-buttons">
+            <button onclick="openImageModal('img/TeaHouse.png')">
+              View Image
+            </button>
+            <a href="" target="_blank">Live Demo</a>
+          </div>
+        </div>
 
-<div class="edu-card">  
-  <h3>Secondary School Certificate (SSC)</h3>  
-  <p class="edu-place">Khaiyachara High School</p>  
-  <p class="edu-year">2020 – 2022</p>  
-  <p class="edu-desc">  
-    Spent the most memorable years here — full of friends, fun, and the first  
-    lessons of life that shaped my future.  
-  </p>  
-</div>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="img/project3.jpg" alt="Project 2" />
+          <h3>Portfolio Website</h3>
 
-  </div>  
-</section>  <section id="projects">  
-  <h2>My Projects</h2>    <div class="project-container">  <!-- Project 1 -->  
-<div class="project-card">  
-  <img src="img/project1.jpg" alt="Project 1">  
-  <h3>QR Code Generate</h3>  
+          <div class="project-buttons">
+            <button onclick="openImageModal('img/project2.jpg')">
+              View Image
+            </button>
+            <a href="" target="_blank">Live Demo</a>
+          </div>
+        </div>
 
-  <div class="project-buttons">  
-    <button onclick="openImageModal('img/project1.jpg')">View Image</button>  
-    <a href="https://oniktechhub.github.io/Generator-OR-Code/" target="_blank">Live Demo</a>  
-  </div>  
-</div>  
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="img/project4.jpg" alt="Project 2" />
+          <h3>Portfolio Website</h3>
 
-<!-- Project 2 -->  
-<div class="project-card">  
-  <img src="img/TeaHouse.png" alt="Project 2">  
-  <h3></h3>  
+          <div class="project-buttons">
+            <button onclick="openImageModal('img/project2.jpg')">
+              View Image
+            </button>
+            <a href="" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- IMAGE MODAL -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+      <img id="modalImg" />
+    </div>
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="contact">
+      <div class="contact-text">
+        <h2>Contact <span> Me</span></h2>
+        <h4>Let's work Together</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, obcaecati
+          distinctio nobis perferendis nemo nam eos aliquam.
+        </p>
+        <!-- Contact List -->
+        <ul class="contact-list">
+          <li><i class="bx bxs-send"></i> onikdas.dev@gmail.com</li>
+          <li><i class="bx bxs-phone"></i> 8801828347761</li>
+        </ul>
 
-  <div class="project-buttons">  
-    <button onclick="openImageModal('img/TeaHouse.png')">View Image</button>  
-    <a href="" target="_blank">Live Demo</a>
-  </div>  
-</div>  
+        <!-- Social Icons -->
+        <div class="contact-socials">
+          <a href="https://github.com/OnikTechHub" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.facebook.com/share/1FpPzRq3Fd/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://wa.me/8801828347761" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="https://linkedin.com/in/YourLinkedInID" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Your Subject" />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>.</p>
+      <!-- Scroll Buttons -->
+      <div class="scroll-buttons">
+        <a href="#home" class="scroll-top"
+          ><i class="bx bx-up-arrow-alt"></i
+        ></a>
+        <a href="#contact" class="scroll-bottom"
+          ><i class="bx bx-down-arrow-alt"></i
+        ></a>
+      </div>
+    </footer>
+    <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-<!-- Project 3 -->  
-<div class="project-card">  
-  <img src="img/project3.jpg" alt="Project 2">  
-  <h3>Portfolio Website</h3>  
-
-  <div class="project-buttons">  
-    <button onclick="openImageModal('img/project2.jpg')">View Image</button>  
-    <a href="" target="_blank">Live Demo</a>
-  </div>  
-</div>  
-
-<!-- Project 3 -->  
-<div class="project-card">  
-  <img src="img/project4.jpg" alt="Project 2">  
-  <h3>Portfolio Website</h3>  
-
-  <div class="project-buttons">  
-    <button onclick="openImageModal('img/project2.jpg')">View Image</button>  
-    <a href="" target="_blank">Live Demo</a> 
-  </div>  
-</div>
-
-  </div>  
-</section>  <!-- IMAGE MODAL -->  <div id="imgModal" class="modal" onclick="closeModal()">  
-  <img id="modalImg">  
-</div>  
-<!-- ===== Contact Section ===== -->  
-<section id="contact" class="contact">    <div class="contact-text">  
-    <h2>Contact <span> Me</span></h2>  
-    <h4>Let's work Together</h4>  
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   
-    At, obcaecati distinctio nobis perferendis nemo nam eos aliquam.</p>  <!-- Contact List -->  
-<ul class="contact-list">  
-  <li><i class='bx bxs-send'></i> onikdas.dev@gmail.com</li>  
-  <li><i class='bx bxs-phone'></i> 8801828347761</li>  
-</ul>  
-
-<!-- Social Icons -->  
-<div class="contact-socials">  
-  <a href="https://github.com/OnikTechHub" target="_blank"><i class="fab fa-github"></i></a>  
-  <a href="https://www.facebook.com/share/1FpPzRq3Fd/" target="_blank"><i class="fab fa-facebook"></i></a>  
-  <a href="https://wa.me/8801828347761" target="_blank"><i class="fab fa-whatsapp"></i></a>  
-  <a href="https://linkedin.com/in/YourLinkedInID" target="_blank"><i class="fab fa-linkedin"></i></a>  
-</div>
-
-  </div>    <!-- Contact Form -->    <div class="contact-form">  
-    <form name="contact" method="POST" data-netlify="true">  
-      <input type="text" name="name" placeholder="Your Name" required />  
-      <input type="email" name="email" placeholder="Your Email" required />  
-      <input type="text" name="subject" placeholder="Your Subject" />  
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>  
-      <button type="submit" class="btn">Submit</button>  
-    </form>  
-  </div>  </section>  
-<footer>  
-  <p>.</p>    
-  <!-- Scroll Buttons -->    
-   <div class="scroll-buttons">  
-    <a href="#home" class="scroll-top"><i class='bx bx-up-arrow-alt'></i></a>  
-    <a href="#contact" class="scroll-bottom"><i class='bx bx-down-arrow-alt'></i></a>  
-  </div>  
-</footer>  
-<!-- Typed.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<!-- Your JS File -->
-<script src="app.js"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="particles.js"></script>
-
-</body>
+    <!-- Your JS File -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+  </body>
 </html>
