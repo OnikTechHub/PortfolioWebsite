@@ -1,3 +1,6 @@
+// =========================
+// Mobile Menu Toggle
+// =========================
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -6,7 +9,7 @@ menuBtn.addEventListener("click", () => {
   menuBtn.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
 });
 
-/* Auto close me8nu on link click (mobile) */
+// Close menu when link clicked (mobile)
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
@@ -18,7 +21,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 // Typed.js Animation
 // =========================
 var typed = new Typed(".typed-text", {
-  strings: ["Web Developer", "Blogger", "YouTuber"],
+  strings: ["Front-End Developer", "Web Developer", "YouTuber"],
   typeSpeed: 70,
   backSpeed: 40,
   backDelay: 1500,
@@ -28,31 +31,46 @@ var typed = new Typed(".typed-text", {
 // =========================
 // Particle Background
 // =========================
-const canvas = document.getElementById("particle-canvas");
+const canvas = document.createElement("canvas");
+canvas.id = "particle-canvas";
+document.body.appendChild(canvas);
+canvas.style.position = "fixed";
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.width = "100%";
+canvas.style.height = "100%";
+canvas.style.zIndex = "-2";
+canvas.style.pointerEvents = "none";
+
 const ctx = canvas.getContext("2d");
 
-// Canvas Fullscreen
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Resize Fix
-window.addEventListener("resize", () => {
+// Set Canvas Size
+function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  initParticles();
-});
-
-let particlesArray = [];
-const NUMBER_OF_PARTICLES = 120;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 
 // Particle Class
 class Particle {
   constructor() {
+    this.reset();
+  }
+
+  reset() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
     this.size = Math.random() * 2 + 1;
     this.weight = Math.random() * 1 + 0.5;
     this.color = "rgba(255,255,255,0.7)";
+  }
+
+  update() {
+    this.y += this.weight;
+    this.x += Math.sin(this.y * 0.02);
+
+    if (this.y > canvas.height + this.size) this.reset();
   }
 
   draw() {
@@ -61,21 +79,12 @@ class Particle {
     ctx.fillStyle = this.color;
     ctx.fill();
   }
-
-  update() {
-    this.y += this.weight;
-    this.x += Math.sin(this.y * 0.02);
-    
-    if (this.y > canvas.height + this.size) {
-      this.y = -this.size;
-      this.x = Math.random() * canvas.width;
-      this.size = Math.random() * 2 + 1;
-      this.weight = Math.random() * 1 + 0.5;
-    }
-  }
 }
 
 // Create Particles
+let particlesArray = [];
+const NUMBER_OF_PARTICLES = 120;
+
 function initParticles() {
   particlesArray = [];
   for (let i = 0; i < NUMBER_OF_PARTICLES; i++) {
@@ -83,70 +92,47 @@ function initParticles() {
   }
 }
 
-// Animate
+// Animate Particles
 function animateParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  particlesArray.forEach((particle) => {
-    particle.update();
-    particle.draw();
+  particlesArray.forEach(p => {
+    p.update();
+    p.draw();
   });
-
   requestAnimationFrame(animateParticles);
 }
 
-// FULL IMAGE MODAL
-function openImageModal(imgSrc) {
-  document.getElementById("modalImg").src = imgSrc;
-  document.getElementById("imgModal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("imgModal").style.display = "none";
-}
-// Start
 initParticles();
-animateParticles();// Smooth scroll for top/bottom buttons
-document.querySelectorAll('.scroll-buttons a').forEach(button => {
-  button.addEventListener('click', e => {
-    e.preventDefault();
-    const targetID = button.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetID);
-    if(targetSection){
-      targetSection.scrollIntoView({behavior: 'smooth'});
-    }
-  });
-});
-// =========================
-// Typed.js Animation
-// =========================
-var typed = new Typed(".typed-text", {
-  strings: ["Front-End Developer", "Web Developer", "YouTuber"],
-  typeSpeed: 70,
-  backSpeed: 40,
-  backDelay: 1500,
-  loop: true,
-});
+animateParticles();
 
-
-// FULL IMAGE MODAL
+// =========================
+// Image Modal
+// =========================
 function openImageModal(imgSrc) {
-  document.getElementById("modalImg").src = imgSrc;
-  document.getElementById("imgModal").style.display = "flex";
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  modalImg.src = imgSrc;
+  modal.style.display = "flex";
 }
 
 function closeModal() {
-  document.getElementById("imgModal").style.display = "none";
+  const modal = document.getElementById("imgModal");
+  modal.style.display = "none";
 }
 
-// Smooth scroll for top/bottom buttons
-document.querySelectorAll('.scroll-buttons a').forEach(button => {
-  button.addEventListener('click', e => {
+// Close modal on click outside image
+document.getElementById("imgModal").addEventListener("click", closeModal);
+
+// =========================
+// Smooth Scroll for Scroll Buttons
+// =========================
+document.querySelectorAll(".scroll-buttons a").forEach(button => {
+  button.addEventListener("click", e => {
     e.preventDefault();
-    const targetID = button.getAttribute('href').substring(1);
+    const targetID = button.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetID);
-    if(targetSection){
-      targetSection.scrollIntoView({behavior: 'smooth'});
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   });
 });

@@ -1,3 +1,6 @@
+// ==========================
+// Particles.js Configuration
+// ==========================
 particlesJS("particles-js", {
   particles: {
     number: {
@@ -47,7 +50,8 @@ particlesJS("particles-js", {
       onclick: {
         enable: true,
         mode: "push"
-      }
+      },
+      resize: true
     },
     modes: {
       grab: {
@@ -55,15 +59,24 @@ particlesJS("particles-js", {
         line_linked: {
           opacity: 0.6
         }
+      },
+      push: {
+        particles_nb: 4
       }
     }
   },
   retina_detect: true
 });
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resize();
 
-window.addEventListener("resize", resize);
+// ==========================
+// Canvas Resize (Optional fallback)
+// ==========================
+function resizeParticlesCanvas() {
+  const particlesContainer = document.getElementById("particles-js");
+  if(particlesContainer){
+    particlesContainer.style.width = window.innerWidth + "px";
+    particlesContainer.style.height = window.innerHeight + "px";
+  }
+}
+resizeParticlesCanvas();
+window.addEventListener("resize", resizeParticlesCanvas);
