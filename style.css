@@ -2,9 +2,8 @@
   --text: #ffffff;
   --primary: #00eaff;
   --secondary: #081b29;
-  --card-bg: rgba(255,255,255,0.07);
-  --shadow: rgba(0,0,0,0.4);
- 
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --shadow: rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -23,11 +22,13 @@
   z-index: -1;
   background: #0a0f24;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -43,37 +44,35 @@ h2 {
   margin-bottom: 20px;
   font-size: 2.3rem;
 }
-
-/* ============================= */
-/* Glassmorphism Navbar/Header   */
-/* ============================= */
 header {
-  position: fixed; /* Always visible */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
 
-  background: rgba(255,255,255,0.05); /* Glass look */
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.05); /* Glass look */
+  /* border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15); */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+
   color: var(--text);
-  transition: background 0.3s, box-shadow 0.3s;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
 }
 
 /* Add subtle shadow on scroll */
 header.scrolled {
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .logo {
   font-size: 1.1rem;
@@ -114,14 +113,12 @@ header.scrolled {
   width: 100%;
 }
 
-
 .hero {
   height: 100vh;
   padding: 60px 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .hero-text h1 {
@@ -141,6 +138,7 @@ header.scrolled {
   max-width: 100%;
   width: 380px;
   border-radius: 50%;
+  
   filter: drop-shadow(0 0 20px var(--primary));
 }
 
@@ -156,12 +154,12 @@ header.scrolled {
   font-size: 20px;
   transition: 0.3s;
   text-decoration: none !important;
-  border:2px solid #0ef;
-  border-radius:50% ;
+  border: 2px solid #0ef;
+  border-radius: 50%;
 }
 
 .socials a:hover {
-    background: #0ef;
+  background: #0ef;
   color: #081b29;
   text-decoration: none !important;
   border: none !important;
@@ -187,6 +185,19 @@ header.scrolled {
   background: #fff;
 }
 
+.hire-btn a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--primary);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
 .hero-img img {
   width: 400px;
   border-radius: 60px;
@@ -209,14 +220,13 @@ header.scrolled {
 .stat-box {
   width: 160px;
   padding: 25px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
 }
 .stat-box:hover {
   transform: translateY(-8px);
   border-color: var(--primary);
 }
-
 
 #skills {
   padding: 60px 50px;
@@ -318,7 +328,9 @@ header.scrolled {
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 300px;
+  margin-right:300px;
   gap: 20px;
   justify-content: center;
 }
@@ -339,8 +351,8 @@ header.scrolled {
 
 .project-card img {
   width: 100%;
-  height: 160px;      
-  object-fit: cover;   
+  height: 160px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -368,7 +380,6 @@ header.scrolled {
   background: var(--primary);
 }
 
-
 .modal {
   display: none;
   position: fixed;
@@ -377,7 +388,7 @@ header.scrolled {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(8px);
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
   z-index: 2000;
@@ -391,86 +402,98 @@ header.scrolled {
 }
 
 .contact {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  align-items: flex-start;
-  padding: 80px 60px;
-  background: #0a0f24;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 100px;              
+    padding: 100px 10%;    
+    background: rgba(255, 255, 255, 0.05);  
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 100px; 
+    margin-right: 100px; 
+    color: #fff;
 }
 
+
 .contact-text {
-  color: #fff;
-  text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
 }
 
 .contact-text h2 {
-  font-size: 85px;
-  font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .contact-text h2 span {
-  color: #0ef;
+    color: #00eeff; 
 }
 
 .contact-text h4 {
-  font-size: 22px;
-  margin-top: 10px;
-  color: #e4e4e4;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
-.contact-text p {
-  margin-top: 15px;
-  font-size: 18px;
-  line-height: 30px;
-  color: #cfcfcf;
-}
 
-/* Contact List */
 .contact-list {
-  list-style: none;
-  margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 .contact-list li {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #d9d9d9;
-  display: flex;
-  align-items: center;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 
-.contact-list i {
-  color: #0ef;
-  font-size: 22px;
-  margin-right: 10px;
+.contact-list li i {
+    color: #00eeff;
+    font-size: 20px;
+}
+
+
+.contact-socials {
+    display: flex;
+    gap: 15px;
 }
 
 .contact-socials a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  color: var(--text);
-  margin: 0 10px;
-  font-size: 20px;
-  transition: 0.3s;
-  text-decoration: none !important;
-  border:2px solid #0ef;
-  border-radius:50% ;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00eeff;
+    border-radius: 50%;
+    color: #00eeff;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .contact-socials a:hover {
-    background: #0ef;
-  color: #081b29;
-  text-decoration: none !important;
-  border: none !important;
+    background: #00eeff;
+    color: #080813;
+    box-shadow: 0 0 10px #00eeff;
 }
-.contact-socials a i {
-  text-decoration: none !important;
-  border: none !important;
+
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 
@@ -523,47 +546,17 @@ header.scrolled {
   cursor: pointer;
   text-transform: uppercase;
   color: #071522;
-  box-shadow: 0 0 25px , 0 0 50px;
+  box-shadow:
+    0 0 25px,
+    0 0 50px;
   transition: 0.3s;
 }
 
 .contact-form button:hover {
-  box-shadow: 0 0 35px , 0 0 80px;
+  box-shadow:
+    0 0 35px,
+    0 0 80px;
   transform: scale(1.03);
-}
-
-/* Scroll Buttons */
-.scroll-buttons {
-  position: fixed;
-  right: 20px;
-  bottom: 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.scroll-buttons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  background: var(--secondary);
-  color: var(--text);
-  border-radius: 50%;
-  box-shadow: 0 4px 10px var(--shadow);
-  font-size: 1.5rem;
-  text-decoration: none !important;
-  border: 2px solid var(--primary);
-  transition: 0.3s;
-}
-
-.scroll-buttons a:hover {
-  background: var(--primary);
-  color: var(--secondary);
-  transform: translateY(-3px);
-  border: none !important;
 }
 
 /* Mobile Menu */
@@ -578,6 +571,7 @@ header.scrolled {
 /* Tablets */
 @media (max-width: 950px) {
   .hero {
+    margin-top: 100px;
     flex-direction: column;
     text-align: center;
   }
@@ -590,10 +584,16 @@ header.scrolled {
   .contact {
     grid-template-columns: 1fr;
     text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .contact-text h2 {
     font-size: 48px;
+  }
+
+  .hire-btn {
+    display: none;
   }
 }
 
@@ -613,7 +613,7 @@ header.scrolled {
     right: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     flex-direction: column;
     align-items: center;
     padding: 30px 0;
@@ -636,5 +636,15 @@ header.scrolled {
 
   .contact-text h2 {
     font-size: 38px;
+  }
+  .hire-btn {
+    display: none;
+  }
+
+  .project-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);  
+  margin-left: 40px;
+  margin-right:40px;
   }
 }
