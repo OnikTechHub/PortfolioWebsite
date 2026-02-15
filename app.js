@@ -136,3 +136,20 @@ document.querySelectorAll(".scroll-buttons a").forEach(button => {
     }
   });
 });
+
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // যখন সেকশনে ঢুকবেন তখন ক্লাস যোগ হবে
+                entry.target.classList.add('show-animation');
+            } else {
+                // যখন সেকশন থেকে বের হয়ে যাবেন তখন ক্লাস রিমুভ হবে (যাতে আবার ফিরে আসলে অ্যানিমেশন হয়)
+                entry.target.classList.remove('show-animation');
+            }
+        });
+    }, { threshold: 0.2 }); // সেকশনের ২০% দেখা গেলেই শুরু হবে
+
+    const educationItems = document.querySelectorAll('.education-item, .timeline-line');
+    educationItems.forEach((el) => observer.observe(el));

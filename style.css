@@ -138,7 +138,7 @@ header.scrolled {
   max-width: 100%;
   width: 380px;
   border-radius: 50%;
-  
+
   filter: drop-shadow(0 0 20px var(--primary));
 }
 
@@ -269,68 +269,106 @@ header.scrolled {
   margin-top: 8px;
   font-size: 0.9rem;
 }
-
 .education {
-  padding: 70px 50px;
-  text-align: center;
+  padding: 100px 10%;
+  background: #0a0f24;
+  color: #fff;
+  min-height: 100vh;
 }
 
-.education h2 {
-  font-size: 2.3rem;
-  margin-bottom: 30px;
+.heading {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 5rem;
+}
+
+.heading span {
+  color: #0ef;
 }
 
 .education-container {
-  max-width: 850px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.edu-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.3s;
+/* মাঝখানের সাদা লাইন */
+.timeline-line {
+  position: absolute;
+  width: 2px;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.education-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+  opacity: 0; /* শুরুতে ইনভিজিবল থাকবে */
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* বাম পাশের কার্ড */
+.education-item.left {
+  left: 0;
+  text-align: right;
+}
+
+/* ডান পাশের কার্ড */
+.education-item.right {
+  left: 50%;
   text-align: left;
 }
 
-.edu-card:hover {
-  transform: translateY(-6px);
-  border-color: #00eaff;
+/* কার্ডের ভেতরের বক্স */
+.education-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  transition: 0.4s;
 }
 
-.edu-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-  color: #00eaff;
+.education-content:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #0ef;
+  transform: translateY(-5px);
 }
 
-.edu-place {
-  font-size: 1rem;
-  font-weight: 500;
+.education-content h3 {
+  font-size: 24px;
   color: #fff;
 }
 
-.edu-year {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin: 5px 0 10px;
+.education-content .institute {
+  color: #0ef;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
-.edu-desc {
-  font-size: 0.95rem;
-  color: #ddd;
-  line-height: 1.5;
+.education-content .description {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.number {
+  position: absolute;
+  top: -20px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
 }
 
 .project-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 300px;
-  margin-right:300px;
+  margin-right: 300px;
   gap: 20px;
   justify-content: center;
 }
@@ -402,100 +440,100 @@ header.scrolled {
 }
 
 .contact {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center; 
-    align-items: flex-start; 
-    gap: 100px;              
-    padding: 100px 10%;    
-    background: rgba(255, 255, 255, 0.05);  
-    border-radius: 20px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    margin-left: 100px; 
-    margin-right: 100px; 
-    color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 100px 10%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #fff;
 }
 
+.contact:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px var(--shadow);
+}
 
 .contact-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .contact-text h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 .contact-text h2 span {
-    color: #00eeff; 
+  color: #00eeff;
 }
 
 .contact-text h4 {
-    margin-bottom: 20px;
-    font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-
 .contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 
 .contact-list li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px; 
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact-list li i {
-    color: #00eeff;
-    font-size: 20px;
+  color: #00eeff;
+  font-size: 20px;
 }
 
-
 .contact-socials {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .contact-socials a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #00eeff;
-    border-radius: 50%;
-    color: #00eeff;
-    text-decoration: none;
-    transition: 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00eeff;
+  border-radius: 50%;
+  color: #00eeff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .contact-socials a:hover {
-    background: #00eeff;
-    color: #080813;
-    box-shadow: 0 0 10px #00eeff;
+  background: #00eeff;
+  color: #080813;
+  box-shadow: 0 0 10px #00eeff;
 }
 
-
 .contact-form {
-    flex: 1;
+  flex: 1;
 }
 
 .contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
 
 .contact-form {
   display: flex;
@@ -564,6 +602,62 @@ header.scrolled {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+}
+
+/* Education section  */
+
+.education-item,
+.timeline-line {
+  opacity: 0;
+  transition: none;
+}
+
+.timeline-line.show-animation {
+  animation: lineGrow 1s ease forwards;
+}
+
+.education-item.left.show-animation {
+  animation: slideInLeft 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.education-item.right.show-animation {
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Education section animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    height: 0;
+    opacity: 1;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 /* ================= Media Queries ================= */
@@ -642,9 +736,25 @@ header.scrolled {
   }
 
   .project-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);  
-  margin-left: 40px;
-  margin-right:40px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .timeline-line {
+      left: 30px;
+    }
+    .education-item {
+      width: 100%;
+      left: 0 !important;
+      padding-left: 70px;
+      text-align: left !important;
+    }
+    .left .number,
+    .right .number {
+      left: 0;
+    }
   }
 }
